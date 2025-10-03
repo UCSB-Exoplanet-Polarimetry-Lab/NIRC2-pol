@@ -1,3 +1,6 @@
+# Script to move the NIRC2 HWP (PCU rotator) through a sequence of angles, as well as the image rotator (IMR)
+# V1 Rebecca Zhang, Sept 2025
+
 #!/usr/bin/env bash
 # hwp_rot_seq.sh — HWP (PCU rotator) movement with NIRC2 images
 
