@@ -1,6 +1,14 @@
 # NIRC2-pol
 NIRC2 polarimetry mode code and documentation -- WORK IN PROGRESS
 
+**Draft Observer's Guide**
+
+A [very much in progress version of the eventual observer's guide](https://docs.google.com/document/d/1xZ5t1CYUM9_GUHD_lKeaxhGwf5xAPUc301j2dv2oiKI/edit?tab=t.v9hqfo1pspp7#heading=h.ej8cynj3sfoq) is available.
+
+**Commissioning Information**
+
+Briley and Rebecca are currently undertaking commissioning for the mode. To make things easier for us (and Max) here are the [daytime commissioning observing logs](https://docs.google.com/spreadsheets/d/1U_huWsCXfuIwbQEWWCHh0eJd3dHCP7AjWrgPCjromW8/edit?gid=0#gid=0) and [daytime commissioning notes](https://docs.google.com/document/d/1m-7SwnngD62mldLdZK4R7xgk7n8diIOE37PRAXg8jSI/edit?tab=t.39i7izsubp6g).
+
 **Polarimetry Mode Background & Design**
 
 [This presentation](https://docs.google.com/presentation/d/1cuBZpOS9-EoZicCjddZLZoA1NdwQcAwb/edit?usp=sharing&ouid=109814392294057955280&rtpof=true&sd=true) and [this document](https://docs.google.com/document/d/1fkb2FDR0VzezvEf2PowtYs7yvfnqeSYF/edit?usp=sharing&ouid=109814392294057955280&rtpof=true&sd=true) provide overviews of the design of the NIRC2 polarimetry mode hardware and PCU2 upgrade.
