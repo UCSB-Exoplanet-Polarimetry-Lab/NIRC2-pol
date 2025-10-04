@@ -1,0 +1,219 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[      7831,        211]
+NotebookOptionsPosition[      7263,        193]
+NotebookOutlinePosition[      7653,        209]
+CellTagsIndexPosition[      7610,        206]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ClearAll", "[", 
+     RowBox[{
+     "i", ",", "q", ",", "u", ",", " ", "\[Phi]", ",", "\[Theta]", ",", 
+      "InputStokes", ",", "Retarder", ",", "Rotation", ",", "Wollaston_o", ",",
+       "Wollaston_e"}], "]"}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"InputStokes", "=", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "q", ",", "u", ",", "0"}], "}"}]}], ";"}], "  ", 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Retarder", "[", "\[Phi]_", "]"}], ":=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"1", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "1", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", 
+         RowBox[{"Cos", "[", "\[Phi]", "]"}], ",", 
+         RowBox[{"Sin", "[", "\[Phi]", "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", 
+         RowBox[{"-", 
+          RowBox[{"Sin", "[", "\[Phi]", "]"}]}], ",", 
+         RowBox[{"Cos", "[", "\[Phi]", "]"}]}], "}"}]}], "}"}]}], ";"}], "\n",
+    "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Rotation", "[", "\[Theta]_", "]"}], ":=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"1", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"2", " ", "\[Theta]"}], "]"}], ",", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"2", " ", "\[Theta]"}], "]"}], ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", 
+         RowBox[{"-", 
+          RowBox[{"Sin", "[", 
+           RowBox[{"2", " ", "\[Theta]"}], "]"}]}], ",", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"2", " ", "\[Theta]"}], "]"}], ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "1"}], "}"}]}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"NOTE", ":", 
+      RowBox[{"assign", " ", "plain", " ", "lists"}]}], ";", 
+     RowBox[{
+      RowBox[{"do", " ", "NOT", " ", "append"}], "//", "MatrixForm"}]}], 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"WollastonO", "=", 
+     RowBox[{
+      RowBox[{"1", "/", "2"}], " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"1", ",", "1", ",", "0", ",", "0"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "1", ",", "0", ",", "0"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}]}]}], 
+    ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"i", " ", "=", " ", "1"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"q", " ", "=", " ", "0.1"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"u", " ", "=", " ", "0"}], " ", ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Theta]", " ", "=", 
+     RowBox[{"45", "Degree"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Phi]", " ", "=", " ", 
+     RowBox[{"Pi", "/", "2"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"WollastonE", "=", 
+     RowBox[{
+      RowBox[{"1", "/", "2"}], " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"1", ",", 
+          RowBox[{"-", "1"}], ",", "0", ",", "0"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "1"}], ",", "1", ",", "0", ",", "0"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}]}]}], 
+    ";"}], "\n", 
+   RowBox[{
+    RowBox[{"exprO", "=", 
+     RowBox[{"Simplify", "[", 
+      RowBox[{"InputStokes", ".", 
+       RowBox[{"Rotation", "[", "\[Theta]", "]"}], ".", 
+       RowBox[{"Retarder", "[", "\[Phi]", "]"}], ".", 
+       RowBox[{"Rotation", "[", 
+        RowBox[{"-", "\[Theta]"}], "]"}], ".", "WollastonO"}], "]"}]}], ";"}],
+    "\n", 
+   RowBox[{
+    RowBox[{"exprE", "=", 
+     RowBox[{"Simplify", "[", 
+      RowBox[{"InputStokes", ".", 
+       RowBox[{"Rotation", "[", "\[Theta]", "]"}], ".", 
+       RowBox[{"Retarder", "[", "\[Phi]", "]"}], ".", 
+       RowBox[{"Rotation", "[", 
+        RowBox[{"-", "\[Theta]"}], "]"}], ".", "WollastonE"}], "]"}]}], ";"}],
+    "\[IndentingNewLine]", "\n", "\[IndentingNewLine]", 
+   RowBox[{"Evaluate", "[", 
+    RowBox[{"FullSimplify", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"exprO", "[", 
+         RowBox[{"[", "1", "]"}], "]"}], " ", "-", " ", 
+        RowBox[{"exprE", "[", 
+         RowBox[{"[", "1", "]"}], "]"}]}], ")"}], "/", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"exprO", "[", 
+         RowBox[{"[", "1", "]"}], "]"}], " ", "+", " ", 
+        RowBox[{"exprE", "[", 
+         RowBox[{"[", "1", "]"}], "]"}]}], ")"}]}], "]"}], "]"}], "\n", 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.968441646383966*^9, 3.9684416486593323`*^9}, {
+   3.9684416814734783`*^9, 3.968441805978023*^9}, {3.968441859750511*^9, 
+   3.968441966297147*^9}, {3.9684420026742373`*^9, 3.9684421353480883`*^9}, {
+   3.968442166887331*^9, 3.9684421827798758`*^9}, {3.9684423760996437`*^9, 
+   3.968442422239086*^9}, 3.9684424740124683`*^9, {3.968442519608923*^9, 
+   3.968442535041369*^9}, {3.968442672432906*^9, 3.968442703373938*^9}, {
+   3.9684427607283583`*^9, 3.968442763344387*^9}, {3.968442820167206*^9, 
+   3.968442826730047*^9}, {3.968442941193877*^9, 3.968443033817994*^9}, {
+   3.968443068798897*^9, 3.9684432825701237`*^9}, {3.968443435414569*^9, 
+   3.9684434979173613`*^9}, {3.968443573609509*^9, 3.968443602449667*^9}, {
+   3.9684436387701683`*^9, 3.968443765528913*^9}, {3.968443826747923*^9, 
+   3.9684438906962357`*^9}, {3.968444291644828*^9, 
+   3.968444292801742*^9}},ExpressionUUID->"eb65efa5-dd61-4d29-a58f-\
+f841a21ae9bd"],
+
+Cell[BoxData["0.`"], "Output",
+ CellChangeTimes->{{3.968443254347795*^9, 3.968443276025805*^9}, {
+  3.968443436079945*^9, 3.96844348662991*^9}, {3.968443580657892*^9, 
+  3.968443602791477*^9}, {3.96844364009866*^9, 3.968443644540805*^9}, {
+  3.968443699307336*^9, 3.9684437659137278`*^9}, {3.9684438283365173`*^9, 
+  3.968443891382415*^9}},
+ CellLabel->
+  "Out[643]=",ExpressionUUID->"611015af-f4a3-4925-9cac-4042a1ce838a"]
+}, Open  ]],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.968441858671447*^9},ExpressionUUID->"d925df70-e229-42e3-9b30-\
+a559ad3fe696"]
+},
+WindowSize->{808, 816},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"14.3 for Mac OS X ARM (64-bit) (July 8, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"6ea7eac3-dfb6-4211-b781-a5559f9f34d1"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 6095, 154, 499, "Input",ExpressionUUID->"eb65efa5-dd61-4d29-a58f-f841a21ae9bd"],
+Cell[6674, 178, 423, 7, 33, "Output",ExpressionUUID->"611015af-f4a3-4925-9cac-4042a1ce838a"]
+}, Open  ]],
+Cell[7112, 188, 147, 3, 49, "Input",ExpressionUUID->"d925df70-e229-42e3-9b30-a559ad3fe696"]
+}
+]
+*)
+
