@@ -1,6 +1,16 @@
 # NIRC2-pol
 NIRC2 polarimetry mode code and documentation -- WORK IN PROGRESS
 
+**Files in this repo**
+- [Folder] Commissioning Analysis = Various files and scripts from use in commissioning; kept as a "historical record"
+- [Folder] k2aoserver_files = files from k2aoserver-new from use in commissioning; also kept for history
+- HWP_Modulation_Math.nb = demonstrates that the fast axis corresponds to the peak of the HWP modulation; not needed for analysis
+- Throughput_Notebook.ipynb and throughput_module.py = files from in-lab testing of the HWP throughput
+- nirc2pol_axiscal_epics.sh = an example of the script used for fast axis calibration, as of 11/24/25. This uses EPICS commands and so must be run on k2aoserver-new
+- nirc2pol_fullcal_epics.sh = an example of the script used for a full internal polarimetric calibration, as of 11/24/25. This uses EPICS commands and so must be run on k2aoserver-new
+- nirc2pol_obs_epics.sh = an example of a typical observing script, as of 11/24/25. Also uses EPICS and must be run on k2aoserver-new
+- qacits_nirc2_pol_params.pro = an under-development version of the QACITS vortex coronagraph centering params file for use with pol mode
+
 **Draft Observer's Guide**
 
 A [very much in progress version of the eventual observer's guide](https://docs.google.com/document/d/1xZ5t1CYUM9_GUHD_lKeaxhGwf5xAPUc301j2dv2oiKI/edit?tab=t.v9hqfo1pspp7#heading=h.ej8cynj3sfoq) is available.
