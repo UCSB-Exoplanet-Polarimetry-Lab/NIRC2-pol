@@ -6,6 +6,7 @@ NIRC2 polarimetry mode code and documentation -- WORK IN PROGRESS
 - [Folder] k2aoserver_files = files from k2aoserver-new from use in commissioning; also kept for history
 - HWP_Modulation_Math.nb = demonstrates that the fast axis corresponds to the peak of the HWP modulation; not needed for analysis
 - Throughput_Notebook.ipynb and throughput_module.py = files from in-lab testing of the HWP throughput
+- fast_axis_analysis.ipynb = a Jupyter notebook for finding the fast axis from your calibration data
 - nirc2pol_axiscal_epics.sh = an example of the script used for fast axis calibration, as of 11/24/25. This uses EPICS commands and so must be run on k2aoserver-new
 - nirc2pol_fullcal_epics.sh = an example of the script used for a full internal polarimetric calibration, as of 11/24/25. This uses EPICS commands and so must be run on k2aoserver-new
 - nirc2pol_obs_epics.sh = an example of a typical observing script, as of 11/24/25. Also uses EPICS and must be run on k2aoserver-new
