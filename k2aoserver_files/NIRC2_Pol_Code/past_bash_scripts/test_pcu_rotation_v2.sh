@@ -1,3 +1,7 @@
+# Script to move the NIRC2 HWP (PCU rotator) through a sequence of angles specified by the observer; 
+# meant as a general use script for observing programs that need HWP rotation
+# V1 Rebecca Zhang, Sept 2025
+
 #!/usr/bin/env bash
 # hwp_rot_seq.sh — HWP (PCU rotator) movement with NIRC2 images
 
@@ -7,12 +11,11 @@
 # Only run this after making sure the k1_pcu.scr file is running in a separate screen
 # export EPICS_CA_ADDR_LIST=localhost:860
 
-
 # --- user inputs ---
-OBJ="test_pcu_rotation_v2"                  # object base name (quotes OK if spaces)
+OBJ="test_pcu_rotation_v2"    # object base name (quotes OK if spaces)
 ANGLES="0 22.5 45 67.5"       # list of HWP angles (deg)
-TOL=0.05                         # degrees tolerance
-POLL=0.1                         # seconds between queries
+TOL=0.05                      # degrees tolerance
+POLL=0.1                      # seconds between queries
 # --------------------
 
 # --- allow terminal call to this script to allow for multiple HWP cycles ---

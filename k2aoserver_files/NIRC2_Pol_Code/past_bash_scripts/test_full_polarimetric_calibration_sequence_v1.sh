@@ -1,3 +1,6 @@
+# Script to move the NIRC2 HWP (PCU rotator) through a sequence of angles, as well as the image rotator (IMR)
+# V1 Rebecca Zhang, Sept 2025
+
 #!/usr/bin/env bash
 # hwp_rot_seq.sh — HWP (PCU rotator) movement with NIRC2 images
 
@@ -10,9 +13,9 @@
 
 
 # --- user inputs ---
-OBJ="pol_cal_imr_hwp_h"                  # object base name (quotes OK if spaces)
-ANGLES="0 10 20 30 40 50 60 70 80 90"       # list of HWP angles (deg)
-IMR_ANGLES="0 15 30 45 60 75 90 105 120 135 150"      # list of IMR angles (deg) - user can edit
+OBJ="test_full_polarimetric_calibration"                  # object base name (quotes OK if spaces)
+ANGLES="0 22.5 45 67.5"       # list of HWP angles (deg)
+IMR_ANGLES="45 90"      # list of IMR angles (deg) - user can edit
 TOL=0.05                         # degrees tolerance for HWP
 IMR_TOL=0.05                      # degrees tolerance for IMR
 POLL=0.1                         # seconds between queries

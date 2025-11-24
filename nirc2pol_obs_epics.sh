@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
-# hwp_rot_seq.sh — HWP (PCU rotator) movement with NIRC2 images
+# nirc2pol_obs_epics.sh — HWP (PCU rotator) movement with NIRC2 images standard observing script
 
 # --------------------
 # Defaults (override with key=value args)
-OBJ="test_pcu_rotation"          # object base name (quotes OK if spaces)
+OBJ="pol_obs"          # object base name (quotes OK if spaces)
+## NEED TO UPDATE OBJECT NAME HANDLING ONCE FITS HEADER KEYWORDS ARE READY
 ANGLES="0 22.5 45 67.5"             # list of HWP angles (deg)
 TOL=0.05                            # degrees tolerance
 POLL=0.2                            # seconds between queries - doubled for now

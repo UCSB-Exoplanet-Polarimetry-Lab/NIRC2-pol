@@ -1,8 +1,9 @@
 # Script to move the NIRC2 HWP (PCU rotator) through a sequence of angles, as well as the image rotator (IMR)
 # V1 Rebecca Zhang, Sept 2025
+# Edited by B. Lewis, Nov. 2025
 
 #!/usr/bin/env bash
-# hwp_rot_seq.sh — HWP (PCU rotator) movement with NIRC2 images
+# nirc2pol_fullcal_epics.sh — HWP (PCU rotator) movement with NIRC2 images, full polarimetric calibration
 
 # Point Channel Access at your IOC (non-standard port 8606)
 # export EPICS_CA_AUTO_ADDR_LIST=NO
@@ -10,15 +11,13 @@
 # Only run this after making sure the k1_pcu.scr file is running in a separate screen
 # export EPICS_CA_ADDR_LIST=localhost:860
 
-
-
 # --- user inputs ---
-OBJ="test_full_polarimetric_calibration"                  # object base name (quotes OK if spaces)
-ANGLES="0 22.5 45 67.5"       # list of HWP angles (deg)
-IMR_ANGLES="45 90"      # list of IMR angles (deg) - user can edit
+OBJ="internal_pol_cal"                  # object base name (quotes OK if spaces)
+ANGLES="0 15 30 45 60 75 90"       # list of HWP angles (deg)
+IMR_ANGLES="0 15 30 45 60 75 90"      # list of IMR angles (deg) - user can edit
 TOL=0.05                         # degrees tolerance for HWP
 IMR_TOL=0.05                      # degrees tolerance for IMR
-POLL=0.1                         # seconds between queries
+POLL=0.2                         # seconds between queries
 # --------------------
 
 # --- allow terminal call to this script to allow for multiple HWP cycles ---
@@ -93,8 +92,8 @@ for imr_ang in $IMR_ANGLES; do
       done
   rfloat=$(printf "%.1f" "$ang")
   imrfloat=$(printf "%.1f" "$imr_ang")
-  ssh nirc2eng@waikoko-new object "${OBJ}_imr_${imrfloat}_hwp_${rfloat}"
-  ssh nirc2eng@waikoko-new goi
+  object "${OBJ}_imr_${imrfloat}_hwp_${rfloat}"
+  goi -s
     done
   done
 done
