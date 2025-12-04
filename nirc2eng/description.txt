@@ -1,0 +1,1 @@
+This is a folder to store all the observing scripts on waikoko-new. These files are in the folder /home/nirc2eng/vis/maxmb
