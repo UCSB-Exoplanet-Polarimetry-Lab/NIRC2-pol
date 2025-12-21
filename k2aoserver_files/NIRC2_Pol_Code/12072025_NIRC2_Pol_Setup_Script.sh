@@ -14,7 +14,7 @@ read
 # Check selected instrument
 ############################################
 # TODO: Change this back to NIRC2 once done testing
-instrument="NIRES"
+instrument="NIRC2"
 val=$(show -s dcs instrume | awk '{print $3}')
 
 if [ "$val" = "$instrument" ]; then
@@ -116,6 +116,7 @@ configAOforFlats
 #     fi
 # fi
 
+# TODO: Need to find a way to test whether the progname is set properly
 # ############################################
 # # Program Name
 # ############################################
@@ -129,31 +130,124 @@ else
     exit 1
 fi
 
-# ############################################
-# # Adding script paths
-# ############################################
-user maxmb 
-# TODO: Parse the print statement from adding the user path to make sure it's correctly added
-echo "Adding polarimetric scripts from path /home/maxmb/pol_scripts"
+############################################
+# Test HWP Rotation (relative +1 degree)
+############################################
 
-# ############################################
-# # Test HWP Rotation
-# ############################################
-### KTL CHANGE:
-    if ! modify -s pcu2 PCUPR="$ang"; then
-        echo "Error: modify failed ($ang deg)"
+# Setting HWP test variables
+TEST_DELTA=1.0
+TEST_TOL=0.01
+TEST_TIMEOUT=30   # seconds
+POLL=0.5 # seconds
+
+echo "---- Testing HWP rotation: reading current PCUPR ----"
+
+# Read current HWP angle
+CUR_ANG=$(show -s pcu2 PCUPR 2>/dev/null | awk '{print $3+0}')
+
+if [[ -z "$CUR_ANG" ]]; then
+    echo "EXITING: Failed to read current HWP angle (PCUPR empty)"
+    exit 1
+fi
+
+# Sanity check numeric
+if ! awk -v x="$CUR_ANG" 'BEGIN{exit !(x==x)}'; then
+    echo "EXITING: Current HWP angle is not numeric: '$CUR_ANG'"
+    exit 1
+fi
+
+TARGET_ANG=$(awk -v a="$CUR_ANG" -v d="$TEST_DELTA" 'BEGIN{printf "%.6f", a+d}')
+
+echo "Current HWP angle = $CUR_ANG deg"
+echo "Commanding HWP to  = $TARGET_ANG deg"
+
+# Command the move
+if ! modify -s pcu2 PCUPR="$TARGET_ANG"; then
+    echo "EXITING: Failed to command HWP to $TARGET_ANG deg"
+    exit 1
+fi
+
+# Poll for convergence
+start_ts=$(date +%s)
+
+while true; do
+    pos=$(show -s pcu2 PCUPR 2>/dev/null | awk '{print $3+0}')
+
+    if [[ -z "$pos" ]]; then
+        echo "EXITING: Failed to read HWP position during test move"
         exit 1
     fi
 
-    # Poll for convergence
-    while true; do
-        pos=$(show -s pcu2 PCUPR 2>/dev/null | awk '{print $3+0}') \
-          || { echo "Error: failed reading position"; break; }
-        echo "HWP angle readback = $pos deg"
+    err=$(awk -v p="$pos" -v t="$TARGET_ANG" 'BEGIN{d=p-t; if(d<0)d=-d; print d}')
 
-        err=$(absdiff "$pos" "$ang")
-        if awk -v e="$err" -v tol="$TOL" 'BEGIN{exit !(e<=tol)}'; then
-          break
-        fi
-        sleep "$POLL"
-    done
+    if awk -v e="$err" -v tol="$TEST_TOL" 'BEGIN{exit !(e<=tol)}'; then
+        echo "CHECK: HWP moved successfully"
+        echo "       Target = $TARGET_ANG deg"
+        echo "       Readback = $pos deg (|diff|=$err ≤ $TEST_TOL)"
+        break
+    fi
+
+    now_ts=$(date +%s)
+    elapsed=$((now_ts - start_ts))
+    if [ "$elapsed" -ge "$TEST_TIMEOUT" ]; then
+        echo "EXITING: HWP did not reach $TARGET_ANG deg within $TEST_TIMEOUT s"
+        echo "         Last readback = $pos deg (|diff|=$err)"
+        exit 1
+    fi
+
+    sleep "$POLL"
+done
+
+############################################
+# Launch xshow monitor for NIRC2 pol keywords
+############################################
+
+if command -v xterm >/dev/null 2>&1; then
+    xterm -title "NIRC2 Pol KTL Monitor" \
+          -e "xshow -s ao pcupr obrt pcuname -s nirc2 slmname" &
+    echo "CHECK: xshow running for NIRC2 pol KTL keywords"
+else
+    echo "WARNING: xterm not found — cannot launch xshow window"
+fi
+
+# TODO: Test the PCU move with poll time and timeout
+############################################
+# PCU: move to HWP center position (NIRC2)
+############################################
+
+PCUNAME="hwp_center"
+PCU_TIMEOUT=120        # seconds
+PCU_POLL=0.5           # seconds
+
+echo "Setting PCU to HWP center position (timeout=${PCU_TIMEOUT}s)..."
+
+# Command the PCU once
+if ! modify -s pcu2 PCUNAME="$PCUNAME"; then
+    echo "EXITING: Failed to command PCU to $PCUNAME"
+    exit 1
+fi
+
+start_time=$(date +%s)
+
+while true; do
+    # Read back via NIRC2
+    pcu_pos=$(show -s nirc2 pcuname 2>/dev/null | awk '{print $3}')
+
+    if [[ "$pcu_pos" = "$PCUNAME" ]]; then
+        echo "CHECK: PCU is in HWP center position (pcuname=$pcu_pos)"
+        break
+    fi
+
+    now=$(date +%s)
+    elapsed=$(( now - start_time ))
+
+    if (( elapsed >= PCU_TIMEOUT )); then
+        echo "EXITING: PCU did not reach $PCU_TARGET within ${$PCU_TIMEOUT}s"
+        echo "         Last readback: pcuname='$pcu_pos'"
+        exit 1
+    fi
+
+    sleep "$PCU_POLL"
+done
+
+
