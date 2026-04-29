@@ -1,37 +1,33 @@
-# NIRC2-pol
-NIRC2 polarimetry mode code and documentation -- WORK IN PROGRESS
+# NIRC2-Pol
+
+Last Updated: 29 April 2026
+
+NIRC2 Polarimetry (NIRC2-Pol, or nirc2p) is a dual-channel polarimetry mode on the Keck II NIRC2 infrared imager. Dual-channel polarimetry uses a polarizing beamsplitter to split the incoming light into two orthogonal polarization states, and a half-wave plate (HWP) to modulate the angle of polarization. Through cycles of four critical HWP angles (0°, 45°, 22.5°, 67.5°), it is possible to recover the linear Stokes vector components Q and U (see de Boer+ 2020 for a description of dual-channel polarimetry and double differencing). 
+
+NIRC2-Pol enables polarimetric observations in JHKL’ bands in combination with multiple existing NIRC2 modes, such as grism spectroscopy and high-contrast coronagraphic imaging, and both NGS and LGS AO. This is useful for many science cases, from solar system objects to circumstellar disks and active galactic nuclei. NIRC2-Pol was developed as part of the Precision Calibration Unit (PCU2) project on Keck II. 
+
+**About this repository**
+This repository contains scripts for efficiently operating the NIRC2 Polarimetry mode. The most officially up-to-date versions of operations scripts will soon be transferred to and managed with Keck's internal SVN version control, where observatory staff will maintain them. Other repositories ([NIRC2-DPP](https://github.com/UCSB-Exoplanet-Polarimetry-Lab/NIRC2Pol-DPP), [pyPolCal](https://github.com/UCSB-Exoplanet-Polarimetry-Lab/pyPolCal)) contain code related to data processing for the mode and instrumental polarization calibration.
 
 **Files in this repo**
 - [Folder] Commissioning Analysis = Various files and scripts from use in commissioning; kept as a "historical record"
-- [Folder] k2aoserver_files = files from k2aoserver-new from use in commissioning; also kept for history
-- HWP_Modulation_Math.nb = demonstrates that the fast axis corresponds to the peak of the HWP modulation; not needed for analysis
-- Throughput_Notebook.ipynb and throughput_module.py = files from in-lab testing of the HWP throughput
-- fast_axis_analysis.ipynb = a Jupyter notebook for finding the fast axis from your calibration data
-- nirc2pol_axiscal_epics.sh = an example of the script used for fast axis calibration, as of 11/24/25. This uses EPICS commands and so must be run on k2aoserver-new
-- nirc2pol_fullcal_epics.sh = an example of the script used for a full internal polarimetric calibration, as of 11/24/25. This uses EPICS commands and so must be run on k2aoserver-new
-- nirc2pol_obs_epics.sh = an example of a typical observing script, as of 11/24/25. Also uses EPICS and must be run on k2aoserver-new
-- qacits_nirc2_pol_params.pro = an under-development version of the QACITS vortex coronagraph centering params file for use with pol mode
 
-**Draft Observer's Guide**
+**Operations/Observer's Guide**
 
-A [very much in progress version of the eventual observer's guide](https://docs.google.com/document/d/1xZ5t1CYUM9_GUHD_lKeaxhGwf5xAPUc301j2dv2oiKI/edit?tab=t.v9hqfo1pspp7#heading=h.ej8cynj3sfoq) is available.
+A [draft version of the NIRC2-Pol operations/observer's guide](https://docs.google.com/document/d/1xZ5t1CYUM9_GUHD_lKeaxhGwf5xAPUc301j2dv2oiKI/edit?tab=t.v9hqfo1pspp7#heading=h.ej8cynj3sfoq) is available.
 
-**Commissioning Information**
+**Citation and Acknowledgements**
 
-Briley and Rebecca are currently undertaking commissioning for the mode. To make things easier for us (and Max) here are the [daytime commissioning observing logs](https://docs.google.com/spreadsheets/d/1U_huWsCXfuIwbQEWWCHh0eJd3dHCP7AjWrgPCjromW8/edit?gid=0#gid=0) and [daytime commissioning notes](https://docs.google.com/document/d/1m-7SwnngD62mldLdZK4R7xgk7n8diIOE37PRAXg8jSI/edit?tab=t.39i7izsubp6g).
+To acknowledge the use of the NIRC2 Polarimetry mode, including code from this repo, please cite Lewis et al. in prep (the NIRC2-Pol first light paper). See below for a BibTeX entry, which will be soon updated.
+```@article{lewis2026nirc,
+  title={NIRC2-Pol: First Light of Near-Infrared Polarimetry on Keck II},
+  author={Lewis, Briley L. and Zhang, Rebecca and Millar-Blanchaer, Maxwell and Marin, Eduardo and Nguyen, Jayke and Melby, William and others},
+  year={In Prep.}
+}```
 
-**Polarimetry Mode Background & Design**
+If using the NIRC2-Pol DPP and/or the Mueller matrix model of the instrument (both currently under development), there will be SPIE proceedings for those coming Summer 2026--Lewis et al. 2026 and Zhang et al. 2026, respectively.
 
-[This presentation](https://docs.google.com/presentation/d/1cuBZpOS9-EoZicCjddZLZoA1NdwQcAwb/edit?usp=sharing&ouid=109814392294057955280&rtpof=true&sd=true) and [this document](https://docs.google.com/document/d/1fkb2FDR0VzezvEf2PowtYs7yvfnqeSYF/edit?usp=sharing&ouid=109814392294057955280&rtpof=true&sd=true) provide overviews of the design of the NIRC2 polarimetry mode hardware and PCU2 upgrade.
+NIRC2-Pol PI: Max Millar-Blanchaer (UCSB)
+NIRC2-Pol Team: Rebecca Zhang, Briley Lewis (UCSB); Jayke Nguyen (UCSD), Ryan Hersey (UCSB), Will Melby (U of A), Thomas McIntosh (UCSB), Mike Fitzgerald (UCLA), Dimitri Mawet (Caltech), Nem Jovanovic (Caltech), Keith Matthews (Caltech)
+PCU2 Team: Jessica Lu, Charles-Antoine Claveau, Matthew Freeman (Berkeley); Eduardo Marin, Scott Lilley, Ed Wetherell, Jacob Taylor, Mahawa Cisse, Lauren Simmons, Paul Richards, Carlos Alvarez, Percy Gomez, Kittrin Matthews, Max Service, Trisha Harmmen, Jim Lyke (Keck)
 
-**Hardware Documentation**
-
-The NIRC2 PCU contains two waveplates: one for J/H/K bands, and one for L band. 
-
-Further information on the hardware can be found [here](https://drive.google.com/drive/u/2/folders/1_Re45YMen-DIj2tEE0324fG9Wq7jTyPB).
-
-Information on the measured properties (retardance vs. wavelength, throughput, beam and focus shift) is [in this presentation](https://docs.google.com/presentation/d/1E3p6K6aG9DB5wS8JrpiJPAXkMdCpnKzTrQwcCg9Xu5c/edit?usp=sharing). Note: revised throughput measurements coming soon.
-
-_Internal Documents_
-
-The following drive link is restricted to members of the Millar-Blanchaer/MAPL lab and collaborators: [MAPL NIRC2 Pol Documents Backup, with link to larger Keck AO Upgrade Google Drive folder](https://drive.google.com/drive/folders/1VjPUz6tGdgwbwcrynyq2S4PRaDscPay_?usp=drive_link)
