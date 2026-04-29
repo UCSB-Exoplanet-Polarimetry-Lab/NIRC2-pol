@@ -1,4 +1,4 @@
-# NIRC2-Pol
+# NIRC2-Pol Operations Software
 
 Last Updated: 29 April 2026
 
@@ -7,9 +7,11 @@ NIRC2 Polarimetry (NIRC2-Pol, or nirc2p) is a dual-channel polarimetry mode on t
 NIRC2-Pol enables polarimetric observations in JHKL’ bands in combination with multiple existing NIRC2 modes, such as grism spectroscopy and high-contrast coronagraphic imaging, and both NGS and LGS AO. This is useful for many science cases, from solar system objects to circumstellar disks and active galactic nuclei. NIRC2-Pol was developed as part of the Precision Calibration Unit (PCU2) project on Keck II. 
 
 **About this repository**
+
 This repository contains scripts for efficiently operating the NIRC2 Polarimetry mode. The most officially up-to-date versions of operations scripts will soon be transferred to and managed with Keck's internal SVN version control, where observatory staff will maintain them. Other repositories ([NIRC2-DPP](https://github.com/UCSB-Exoplanet-Polarimetry-Lab/NIRC2Pol-DPP), [pyPolCal](https://github.com/UCSB-Exoplanet-Polarimetry-Lab/pyPolCal)) contain code related to data processing for the mode and instrumental polarization calibration.
 
 **Files in this repo**
+
 - [Folder] Commissioning Analysis = Various files and scripts from use in commissioning; kept as a "historical record"
 
 **Operations/Observer's Guide**
@@ -23,7 +25,8 @@ To acknowledge the use of the NIRC2 Polarimetry mode, including code from this r
   title={NIRC2-Pol: First Light of Near-Infrared Polarimetry on Keck II},
   author={Lewis, Briley L. and Zhang, Rebecca and Millar-Blanchaer, Maxwell and Marin, Eduardo and Nguyen, Jayke and Melby, William and others},
   year={In Prep.}
-}```
+}
+```
 
 If using the NIRC2-Pol DPP and/or the Mueller matrix model of the instrument (both currently under development), there will be SPIE proceedings for those coming Summer 2026--Lewis et al. 2026 and Zhang et al. 2026, respectively.
 
