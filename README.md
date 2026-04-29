@@ -21,7 +21,8 @@ A [draft version of the NIRC2-Pol operations/observer's guide](https://docs.goog
 **Citation and Acknowledgements**
 
 To acknowledge the use of the NIRC2 Polarimetry mode, including code from this repo, please cite Lewis et al. in prep (the NIRC2-Pol first light paper). See below for a BibTeX entry, which will be soon updated.
-```@article{lewis2026nirc,
+```
+@article{lewis2026nirc,
   title={NIRC2-Pol: First Light of Near-Infrared Polarimetry on Keck II},
   author={Lewis, Briley L. and Zhang, Rebecca and Millar-Blanchaer, Maxwell and Marin, Eduardo and Nguyen, Jayke and Melby, William and others},
   year={In Prep.}
