@@ -20,7 +20,9 @@ This repository contains scripts for efficiently operating the NIRC2 Polarimetry
 **Syntax for using each script**
 
 `bash Fast_Axis_Cal_Sequence.sh FILTER=[filter]`
+
 `bash HWP_Rotation_Sequence.sh KWARG=[KEYWORD_VALUE]`
+
 `bash Internal_Pol_Cal_Sequence.sh FILTER=[filter]`
 
 See the Operations Guide below for a full description of these commands and their various options/keywords.
