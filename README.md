@@ -17,6 +17,14 @@ This repository contains scripts for efficiently operating the NIRC2 Polarimetry
 - HWP_Rotation_Sequence.sh = Used for typical observing sequences (four critical angles: 0, 45, 22.5, 67.5 deg)
 - Internal_Pol_Cal_Sequence.sh = Takes data rotating both HWP and IMR for instrumental polarization calibration
 
+**Syntax for using each script**
+
+`bash Fast_Axis_Cal_Sequence.sh FILTER=[filter]`
+`bash HWP_Rotation_Sequence.sh KWARG=[KEYWORD_VALUE]`
+`bash Internal_Pol_Cal_Sequence.sh FILTER=[filter]`
+
+See the Operations Guide below for a full description of these commands and their various options/keywords.
+
 **Operations/Observer's Guide**
 
 A [draft version of the NIRC2-Pol operations/observer's guide](https://docs.google.com/document/d/1xZ5t1CYUM9_GUHD_lKeaxhGwf5xAPUc301j2dv2oiKI/edit?tab=t.v9hqfo1pspp7#heading=h.ej8cynj3sfoq) is available.
