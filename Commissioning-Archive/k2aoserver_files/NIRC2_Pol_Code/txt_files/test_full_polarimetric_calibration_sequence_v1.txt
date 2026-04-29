@@ -1,0 +1,466 @@
+k2:ao:pcu:rot:statRb           INPOS
+k2:ao:pcu:rot:posvalRb         67.5025
+==== Moving IMR to 45 deg ====
+Old : k2:ao:ob:rot:goLocUu           0
+New : k2:ao:ob:rot:goLocUu           0
+IMR Angle =-0.0004
+IMR Angle =-0.0004
+IMR Angle =-0.0004
+IMR Angle =-0.0004
+IMR Angle =-0.0004
+IMR Angle =-0.0004
+IMR Angle =-0.0004
+IMR Angle =-0.0004
+IMR Angle =-0.0004
+IMR Angle =0.210831
+IMR Angle =0.210831
+IMR Angle =0.210831
+IMR Angle =0.210831
+IMR Angle =0.210831
+IMR Angle =0.210831
+IMR Angle =1.92732
+IMR Angle =1.92732
+IMR Angle =1.92732
+IMR Angle =1.92732
+IMR Angle =1.92732
+IMR Angle =1.92732
+IMR Angle =4.56319
+IMR Angle =4.56319
+IMR Angle =4.56319
+IMR Angle =4.56319
+IMR Angle =4.56319
+IMR Angle =4.56319
+IMR Angle =9.87682
+IMR Angle =9.87682
+IMR Angle =9.87682
+IMR Angle =9.87682
+IMR Angle =9.87682
+IMR Angle =9.87682
+IMR Angle =12.5318
+IMR Angle =12.5318
+IMR Angle =12.5318
+IMR Angle =12.5318
+IMR Angle =12.5318
+IMR Angle =12.5318
+IMR Angle =15.1898
+IMR Angle =15.1898
+IMR Angle =15.1898
+IMR Angle =15.1898
+IMR Angle =15.1898
+IMR Angle =15.1898
+IMR Angle =17.8442
+IMR Angle =17.8442
+IMR Angle =17.8442
+IMR Angle =17.8442
+IMR Angle =17.8442
+IMR Angle =17.8442
+IMR Angle =20.5005
+IMR Angle =20.5005
+IMR Angle =20.5005
+IMR Angle =20.5005
+IMR Angle =20.5005
+IMR Angle =20.5005
+IMR Angle =23.1595
+IMR Angle =23.1595
+IMR Angle =23.1595
+IMR Angle =23.1595
+IMR Angle =23.1595
+IMR Angle =23.1595
+IMR Angle =25.8131
+IMR Angle =25.8131
+IMR Angle =25.8131
+IMR Angle =25.8131
+IMR Angle =25.8131
+IMR Angle =25.8131
+IMR Angle =28.469
+IMR Angle =28.469
+IMR Angle =28.469
+IMR Angle =28.469
+IMR Angle =28.469
+IMR Angle =28.469
+IMR Angle =33.7829
+IMR Angle =33.7829
+IMR Angle =33.7829
+IMR Angle =33.7829
+IMR Angle =33.7829
+IMR Angle =33.7829
+IMR Angle =36.4364
+IMR Angle =36.4364
+IMR Angle =36.4364
+IMR Angle =36.4364
+IMR Angle =36.4364
+IMR Angle =36.4364
+IMR Angle =39.0958
+IMR Angle =39.0958
+IMR Angle =39.0958
+IMR Angle =39.0958
+IMR Angle =39.0958
+IMR Angle =39.0958
+IMR Angle =41.7513
+IMR Angle =41.7513
+IMR Angle =41.7513
+IMR Angle =41.7513
+IMR Angle =41.7513
+IMR Angle =41.7513
+IMR Angle =44.1497
+IMR Angle =44.1497
+IMR Angle =44.1497
+IMR Angle =44.1497
+IMR Angle =44.1497
+IMR Angle =44.1497
+IMR Angle =44.9853
+==== Starting HWP cycle 1 of 1 at IMR 45 deg ====
+---- Moving to HWP 0 deg ----
+Old : k2:ao:pcu:rot:posval           67.5
+New : k2:ao:pcu:rot:posval           67.5
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=-0.0025
+setting object = test_full_polarimetric_calibration_imr_45.0_hwp_0.0 (wait)
+- Goi script starts: Sun 28 Sep 2025 11:46:01 AM HST
+Waiting for motors to stop moving...
+Turning off all motors except for PMR...
+Waiting for last exposure to be completed...
+Waiting for AO loops to close if needed...
+Keywords set to: off off off
+Waiting for exposure to be completed...
+Running KTL oneshot of nirc2 KTL service to generate FITS headers...
+- Exposure starting: Sun 28 Sep 2025 11:46:11 AM HST
+Waiting for exposure to be completed...
+- Exposure done: Sun 28 Sep 2025 11:48:14 AM HST
+Took last image /sdata907/nirc5//nirc2eng/2025sep28/n0017.fits
+- goi script ends: Sun 28 Sep 2025 11:48:14 AM HST
+---- Moving to HWP 22.5 deg ----
+Old : k2:ao:pcu:rot:posval           0
+New : k2:ao:pcu:rot:posval           0
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=22.5025
+setting object = test_full_polarimetric_calibration_imr_45.0_hwp_22.5 (wait)
+- Goi script starts: Sun 28 Sep 2025 11:48:17 AM HST
+Waiting for motors to stop moving...
+Turning off all motors except for PMR...
+Waiting for last exposure to be completed...
+Waiting for AO loops to close if needed...
+Keywords set to: off off off
+Waiting for exposure to be completed...
+Running KTL oneshot of nirc2 KTL service to generate FITS headers...
+- Exposure starting: Sun 28 Sep 2025 11:48:27 AM HST
+Waiting for exposure to be completed...
+- Exposure done: Sun 28 Sep 2025 11:50:29 AM HST
+Took last image /sdata907/nirc5//nirc2eng/2025sep28/n0018.fits
+- goi script ends: Sun 28 Sep 2025 11:50:29 AM HST
+---- Moving to HWP 45 deg ----
+Old : k2:ao:pcu:rot:posval           22.5
+New : k2:ao:pcu:rot:posval           22.5
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=45.0025
+setting object = test_full_polarimetric_calibration_imr_45.0_hwp_45.0 (wait)
+- Goi script starts: Sun 28 Sep 2025 11:50:32 AM HST
+Waiting for motors to stop moving...
+Turning off all motors except for PMR...
+Waiting for last exposure to be completed...
+Waiting for AO loops to close if needed...
+Keywords set to: off off off
+Waiting for exposure to be completed...
+Running KTL oneshot of nirc2 KTL service to generate FITS headers...
+- Exposure starting: Sun 28 Sep 2025 11:50:42 AM HST
+Waiting for exposure to be completed...
+- Exposure done: Sun 28 Sep 2025 11:52:44 AM HST
+Took last image /sdata907/nirc5//nirc2eng/2025sep28/n0019.fits
+- goi script ends: Sun 28 Sep 2025 11:52:44 AM HST
+---- Moving to HWP 67.5 deg ----
+Old : k2:ao:pcu:rot:posval           45
+New : k2:ao:pcu:rot:posval           45
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=67.5025
+setting object = test_full_polarimetric_calibration_imr_45.0_hwp_67.5 (wait)
+- Goi script starts: Sun 28 Sep 2025 11:52:47 AM HST
+Waiting for motors to stop moving...
+Turning off all motors except for PMR...
+Waiting for last exposure to be completed...
+Waiting for AO loops to close if needed...
+Keywords set to: off off off
+Waiting for exposure to be completed...
+Running KTL oneshot of nirc2 KTL service to generate FITS headers...
+- Exposure starting: Sun 28 Sep 2025 11:52:57 AM HST
+Waiting for exposure to be completed...
+- Exposure done: Sun 28 Sep 2025 11:55:00 AM HST
+Took last image /sdata907/nirc5//nirc2eng/2025sep28/n0020.fits
+- goi script ends: Sun 28 Sep 2025 11:55:00 AM HST
+==== Moving IMR to 90 deg ====
+Old : k2:ao:ob:rot:goLocUu           45
+New : k2:ao:ob:rot:goLocUu           45
+IMR Angle =45.0005
+IMR Angle =45.0005
+IMR Angle =45.0005
+IMR Angle =45.0005
+IMR Angle =45.0005
+IMR Angle =45.0005
+IMR Angle =45.0005
+IMR Angle =45.0005
+IMR Angle =44.9928
+IMR Angle =44.9928
+IMR Angle =44.9928
+IMR Angle =44.9928
+IMR Angle =44.9928
+IMR Angle =44.9928
+IMR Angle =47.9631
+IMR Angle =47.9631
+IMR Angle =47.9631
+IMR Angle =47.9631
+IMR Angle =47.9631
+IMR Angle =47.9631
+IMR Angle =50.6174
+IMR Angle =50.6174
+IMR Angle =50.6174
+IMR Angle =50.6174
+IMR Angle =50.6174
+IMR Angle =50.6174
+IMR Angle =53.2757
+IMR Angle =53.2757
+IMR Angle =53.2757
+IMR Angle =53.2757
+IMR Angle =53.2757
+IMR Angle =53.2757
+IMR Angle =55.9308
+IMR Angle =55.9308
+IMR Angle =55.9308
+IMR Angle =55.9308
+IMR Angle =55.9308
+IMR Angle =55.9308
+IMR Angle =58.5878
+IMR Angle =58.5878
+IMR Angle =58.5878
+IMR Angle =58.5878
+IMR Angle =58.5878
+IMR Angle =58.5878
+IMR Angle =61.2448
+IMR Angle =61.2448
+IMR Angle =61.2448
+IMR Angle =61.2448
+IMR Angle =61.2448
+IMR Angle =61.2448
+IMR Angle =63.9003
+IMR Angle =63.9003
+IMR Angle =63.9003
+IMR Angle =63.9003
+IMR Angle =63.9003
+IMR Angle =63.9003
+IMR Angle =69.2135
+IMR Angle =69.2135
+IMR Angle =69.2135
+IMR Angle =69.2135
+IMR Angle =69.2135
+IMR Angle =69.2135
+IMR Angle =71.8677
+IMR Angle =71.8677
+IMR Angle =71.8677
+IMR Angle =71.8677
+IMR Angle =71.8677
+IMR Angle =71.8677
+IMR Angle =74.5246
+IMR Angle =74.5246
+IMR Angle =74.5246
+IMR Angle =74.5246
+IMR Angle =74.5246
+IMR Angle =74.5246
+IMR Angle =77.1815
+IMR Angle =77.1815
+IMR Angle =77.1815
+IMR Angle =77.1815
+IMR Angle =77.1815
+IMR Angle =77.1815
+IMR Angle =79.838
+IMR Angle =79.838
+IMR Angle =79.838
+IMR Angle =79.838
+IMR Angle =79.838
+IMR Angle =79.838
+IMR Angle =82.494
+IMR Angle =82.494
+IMR Angle =82.494
+IMR Angle =82.494
+IMR Angle =82.494
+IMR Angle =82.494
+IMR Angle =85.1522
+IMR Angle =85.1522
+IMR Angle =85.1522
+IMR Angle =85.1522
+IMR Angle =85.1522
+IMR Angle =85.1522
+IMR Angle =87.7959
+IMR Angle =87.7959
+IMR Angle =87.7959
+IMR Angle =87.7959
+IMR Angle =87.7959
+IMR Angle =87.7959
+IMR Angle =90.0004
+==== Starting HWP cycle 1 of 1 at IMR 90 deg ====
+---- Moving to HWP 0 deg ----
+Old : k2:ao:pcu:rot:posval           67.5
+New : k2:ao:pcu:rot:posval           67.5
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=67.5025
+HWP rotator posvalRb=-0.0025
+setting object = test_full_polarimetric_calibration_imr_90.0_hwp_0.0 (wait)
+- Goi script starts: Sun 28 Sep 2025 11:55:21 AM HST
+Waiting for motors to stop moving...
+Turning off all motors except for PMR...
+Waiting for last exposure to be completed...
+Waiting for AO loops to close if needed...
+Keywords set to: off off off
+Waiting for exposure to be completed...
+Running KTL oneshot of nirc2 KTL service to generate FITS headers...
+- Exposure starting: Sun 28 Sep 2025 11:55:31 AM HST
+Waiting for exposure to be completed...
+- Exposure done: Sun 28 Sep 2025 11:57:33 AM HST
+Took last image /sdata907/nirc5//nirc2eng/2025sep28/n0021.fits
+- goi script ends: Sun 28 Sep 2025 11:57:33 AM HST
+---- Moving to HWP 22.5 deg ----
+Old : k2:ao:pcu:rot:posval           0
+New : k2:ao:pcu:rot:posval           0
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=-0.0025
+HWP rotator posvalRb=22.5025
+setting object = test_full_polarimetric_calibration_imr_90.0_hwp_22.5 (wait)
+- Goi script starts: Sun 28 Sep 2025 11:57:36 AM HST
+Waiting for motors to stop moving...
+Turning off all motors except for PMR...
+Waiting for last exposure to be completed...
+Waiting for AO loops to close if needed...
+Keywords set to: off off off
+Waiting for exposure to be completed...
+Running KTL oneshot of nirc2 KTL service to generate FITS headers...
+- Exposure starting: Sun 28 Sep 2025 11:57:46 AM HST
+Waiting for exposure to be completed...
+- Exposure done: Sun 28 Sep 2025 11:59:48 AM HST
+Took last image /sdata907/nirc5//nirc2eng/2025sep28/n0022.fits
+- goi script ends: Sun 28 Sep 2025 11:59:48 AM HST
+---- Moving to HWP 45 deg ----
+Old : k2:ao:pcu:rot:posval           22.5
+New : k2:ao:pcu:rot:posval           22.5
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=22.5025
+HWP rotator posvalRb=45.0025
+setting object = test_full_polarimetric_calibration_imr_90.0_hwp_45.0 (wait)
+- Goi script starts: Sun 28 Sep 2025 11:59:51 AM HST
+Waiting for motors to stop moving...
+Turning off all motors except for PMR...
+Waiting for last exposure to be completed...
+Waiting for AO loops to close if needed...
+Keywords set to: off off off
+Waiting for exposure to be completed...
+Running KTL oneshot of nirc2 KTL service to generate FITS headers...
+- Exposure starting: Sun 28 Sep 2025 12:00:02 PM HST
+Waiting for exposure to be completed...
+- Exposure done: Sun 28 Sep 2025 12:02:04 PM HST
+Took last image /sdata907/nirc5//nirc2eng/2025sep28/n0023.fits
+- goi script ends: Sun 28 Sep 2025 12:02:04 PM HST
+---- Moving to HWP 67.5 deg ----
+Old : k2:ao:pcu:rot:posval           45
+New : k2:ao:pcu:rot:posval           45
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=45.0025
+HWP rotator posvalRb=67.5025
+setting object = test_full_polarimetric_calibration_imr_90.0_hwp_67.5 (wait)
+- Goi script starts: Sun 28 Sep 2025 12:02:07 PM HST
+Waiting for motors to stop moving...
+Turning off all motors except for PMR...
+Waiting for last exposure to be completed...
+Waiting for AO loops to close if needed...
+Keywords set to: off off off
+Waiting for exposure to be completed...
+Running KTL oneshot of nirc2 KTL service to generate FITS headers...
+- Exposure starting: Sun 28 Sep 2025 12:02:17 PM HST
+Waiting for exposure to be completed...
+- Exposure done: Sun 28 Sep 2025 12:04:19 PM HST
+Took last image /sdata907/nirc5//nirc2eng/2025sep28/n0024.fits
+- goi script ends: Sun 28 Sep 2025 12:04:19 PM HST
+Final HWP rotator position:
+k2:ao:pcu:rot:posvalRb         67.5025
