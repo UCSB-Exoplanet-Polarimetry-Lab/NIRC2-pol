@@ -14,6 +14,7 @@ HWP_CYCLES=1                     # number of HWP cycles
 J_ADD=0
 H_ADD=0
 K_ADD=0
+L_ADD=0
 
 # Dither defaults
 DITHER=0                         # 0 = no dither (default), 1 = ABBA dither
