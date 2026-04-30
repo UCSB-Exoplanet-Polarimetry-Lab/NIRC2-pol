@@ -10,11 +10,6 @@ NUM_EXPOSURES=1                  # exposures per HWP angle
 HWP_CYCLES=1                     # number of HWP cycles
 #FILT=""
 
-# Additive offsets (currently unused)
-J_ADD=0
-H_ADD=0
-K_ADD=0
-
 # Dither defaults
 DITHER=0                         # 0 = no dither (default), 1 = ABBA dither
 XY=""                            # string "dx dy"
